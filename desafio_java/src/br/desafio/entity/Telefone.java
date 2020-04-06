@@ -11,14 +11,18 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name = "tb_telefone")
@@ -45,6 +49,11 @@ public class Telefone implements Serializable {
 	@Column(name="tipo", nullable=true)
 	private String tipo;
 
+	@ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_pessoa", nullable = false)
+    private Pessoa pessoa;
+
+	
 	public Long getId() {
 		return id;
 	}

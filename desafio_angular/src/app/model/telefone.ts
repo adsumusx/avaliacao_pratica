@@ -5,4 +5,5 @@ export class Telefone {
     loginOperador: string;
     numero: number;
     tipo: string;
+    idPessoa: number;
 }

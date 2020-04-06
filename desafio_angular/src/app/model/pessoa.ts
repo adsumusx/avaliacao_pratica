@@ -10,4 +10,5 @@ export class Pessoa {
     nmMae: string;
     tpPessoa: string;
     loginOperador: string;
+    idTelefone: number;
 }
