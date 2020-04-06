@@ -35,7 +35,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "html2canvas": "^1.0.0-alpha.12",
-    "jquery": "^1.12.4",
+    "jquery": "^3.4.0",
     "jspdf": "^1.4.1",
     "jwt-decode": "^2.2.0",
     "ng2-cpf-cnpj": "^0.1.1",
