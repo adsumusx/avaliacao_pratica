@@ -1,0 +1,66 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-black fixed-top nav_sup_1" style="background-color: #ccc;padding:0px;">
+
+    <div style=" max-width: 100%; " class="w-100 ">
+        <div class="row " style="margin-left: 0px; min-height: 20%;">
+            <div style="background-color: #A38400 ;" class="col">
+                <ul class="nav navbar-nav icon_nav_sup">
+                    <li class="linavma">
+                        <a (click)="comeBack()">
+                            <em class="navbar-ico fa fa-home " title="voltar para os aplicativos da PGFN">
+                                <a class="text_nav"><b>Voltar</b></a>
+                            </em>
+                        </a>
+                    </li>
+                    <li style="text-align: center;" class="linavunidade">
+                        <a href="#">
+                        </a>
+                    </li>
+                    <li style="text-align: center; " class="linavip ">
+                        <a href="# ">
+                        </a>
+                    </li>
+                    <li style="text-align: right;">
+                        <em class="navbar-ico fa fa-user " title="desconectar de todos os serviços da PGFN">
+                            <a class="text_nav imghide"><b>KAPPA</b></a><span>&nbsp;&nbsp;</span>
+                            <i (click)="openDialogLogout()" class="fa fa-sign-out pointerUsuario" onclick="topo()"
+                                aria-hidden="true"></i>
+                        </em>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-100"></div>
+            <div style="height: 75px; background-color: #930035;" class="col">
+                <ul class="nav navbar-nav icon_nav_sup_2">
+                    <li class="adjustpad">
+                        <button type="button" class="navbar-toggle" mat-button (click)="drawer.toggle()">
+                            <em class=" fa fa-navicon"></em>
+                        </button>
+                    </li>
+                    <li class="text_nav_title adjustpad">
+                        <span>&nbsp;&nbsp;</span><a>Desafio - Sistema de Controle de Operadores</a>
+                    </li>
+                    <li class="inputPesquisa">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav altmenu" mode="side">
+        <!-- <mat-menu #rootMenu="matMenu"> -->
+        <app-menu></app-menu>
+        <!-- </mat-menu> -->
+    </mat-drawer>
+    <div id="content" class="adjustbody">
+        <router-outlet></router-outlet>
+    </div>
+    <div>
+        <layout-footer class="footer"></layout-footer>
+    </div>
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px', fullScreenBackdrop:true }"
+        [template]="customLoadingTemplate"></ngx-loading>
+</mat-drawer-container>

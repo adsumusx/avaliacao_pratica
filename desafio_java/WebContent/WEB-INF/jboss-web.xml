@@ -1,0 +1,3 @@
+<jboss-web>
+    <context-root>/desafio</context-root>
+</jboss-web>

@@ -1,0 +1,56 @@
+<meta name="viewport"
+  content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+<br>
+<div class="wrapper menuaj">
+  <nav class="vertical">
+    <ul>
+      <li>
+        <label for="home" routerLink="/lista-operador" onclick="topo()" id="lista_menu"><i
+            class="fa fa-home"><span>&nbsp;&nbsp;</span></i>Início</label>
+        <input type="checkbox" name="verticalMenu" id="home" value="inicio" />
+      </li>
+      <li>
+        <label for="operador" id="a"><i
+            [className]="isHiddenOperador ? 'fa fa-angle-double-up':'fa fa-angle-double-down'"><span>&nbsp;&nbsp;</span></i>Operadores</label>
+        <input ng-model="isHiddenOperador" (click)="manageCounter($event, 1)" type="checkbox" name="a" id="operador"
+          value="a" />
+        <div>
+          <ul>
+            <li><a routerLink="/cad-operador" onclick=" topo()"><i
+                  class="fa fa-angle-right"><span>&nbsp;&nbsp;</span></i>Cadastrar Operador</a></li>
+            <li><a routerLink="/lista-operador" onclick=" topo()"><i
+                  class="fa fa-angle-right"><span>&nbsp;&nbsp;</span></i>Listar Operadores</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <label for="pessoa" id="a"><i
+            [className]="isHiddenPessoa ? 'fa fa-angle-double-up':'fa fa-angle-double-down'"><span>&nbsp;&nbsp;</span></i>Pessoas</label>
+        <input ng-model="isHiddenPessoa " (click)="manageCounter($event, 2)" type="checkbox" name="b" id="pessoa"
+          value="a" />
+        <div>
+          <ul>
+            <li><a routerLink="/cad-pessoa" onclick=" topo()"><i
+                  class="fa fa-angle-right"><span>&nbsp;&nbsp;</span></i>Cadastrar Pessoa</a></li>
+            <li><a routerLink="/lista-pessoas" onclick=" topo()"><i
+                  class="fa fa-angle-right"><span>&nbsp;&nbsp;</span></i>Listar Pessoas</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <label for="telefone" id="a"><i
+            [className]="isHiddenTelefone ? 'fa fa-angle-double-up':'fa fa-angle-double-down'"><span>&nbsp;&nbsp;</span></i>Telefones</label>
+        <input ng-model="isHiddenTelefone" (click)="manageCounter($event, 3)" type="checkbox" name="c" id="telefone"
+          value="a" />
+        <div>
+          <ul>
+            <li><a routerLink="/cad-telefone" onclick=" topo()"><i
+                  class="fa fa-angle-right"><span>&nbsp;&nbsp;</span></i>Cadastrar Telefone</a></li>
+            <li><a routerLink="/lista-telefones" onclick=" topo()"><i
+                  class="fa fa-angle-right"><span>&nbsp;&nbsp;</span></i>Listar Telefones</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>

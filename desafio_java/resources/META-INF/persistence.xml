@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+        http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="desafioDS"
+		transaction-type="RESOURCE_LOCAL">
+		<!-- Provider -->
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!-- DataSource -->
+		<jta-data-source>java:jboss/datasources/desafioDS</jta-data-source>
+		
+		<class>br.desafio.entity.Operador</class>
+		<class>br.desafio.entity.Pessoa</class>
+		<class>br.desafio.entity.Telefone</class>
+		<class>br.desafio.entity.Error</class>
+		<class>br.desafio.entity.Operacao</class>
+
+
+		<!-- Hibernate Properties -->
+		<properties>
+			<property name="hibernate.transaction.jta.platform"
+				value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.PostgreSQL82Dialect" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.default_schema" value="db_desafio" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+</persistence>
