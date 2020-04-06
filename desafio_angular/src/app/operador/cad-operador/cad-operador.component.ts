@@ -64,7 +64,7 @@ export class CadOperadorComponent implements OnInit {
             operador.nomeOperador = this.cad_operador.value.nomeOperador;
             operador.loginOperador = this.cad_operador.value.loginOperador;
             operador.senhaOperador = this.cad_operador.value.senhaOperador;
-            operador.perfil = this.cad_operador.value.perfilOperador;
+            operador.perfilOperador = this.cad_operador.value.perfilOperador;
             var data = new Date(),
               dia = data.getDate().toString().padStart(2, '0'),
               mes = (data.getMonth() + 1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.

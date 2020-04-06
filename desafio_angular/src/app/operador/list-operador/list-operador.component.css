@@ -1,0 +1,101 @@
+/* @import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css'; */
+
+.pointer {
+    cursor: pointer;
+}
+
+.fp-profileteste {
+    width: 100%;
+    overflow: auto;
+}
+
+.editar,
+.button_sim {
+    margin: 10%;
+}
+
+.editar,
+.excluir {
+    font-size: 20px !important;
+}
+
+.excluir a {
+    color: #ea3f3f !important;
+}
+
+.icons {
+    width: 16px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-elevation-z8 {
+    margin: 6%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.searchDataTable {
+    width: 25%;
+    float: right;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.backGroundHover:hover {
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+
+/* h5 {
+  color: #930935;
+} */
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.maredit {
+    margin-right: 5px;
+}
+.buttoni{
+  color: #0BBBBF
+}
+.padlist{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+    .margnl {
+        margin-top: 20%;
+    }
+}
+
+mat-header-cell {
+    text-align: center;
+}
+
+.btmargin {
+    margin: 10px !important;
+}

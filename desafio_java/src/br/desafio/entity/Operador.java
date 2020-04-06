@@ -42,8 +42,8 @@ public class Operador implements Serializable {
 	@Column(name="senha_operador", nullable=true)
 	private String senhaOperador;
 	
-	@Column(name="perfil", nullable=true)
-	private String perfil;
+	@Column(name="perfil_operador", nullable=true)
+	private String perfilOperador;
 
 	public Long getId() {
 		return id;
@@ -77,12 +77,12 @@ public class Operador implements Serializable {
 		this.loginOperador = loginOperador;
 	}
 
-	public String getPerfil() {
-		return perfil;
+	public String getPerfilOperador() {
+		return perfilOperador;
 	}
 
-	public void setPerfil(String perfil) {
-		this.perfil = perfil;
+	public void setPerfilOperador(String perfilOperador) {
+		this.perfilOperador = perfilOperador;
 	}
 
 	public String getSenhaOperador() {
